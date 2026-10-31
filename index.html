@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kendeal Agencies – Homes, Apartments & Land in Kenya</title>
+<style>
+:root{--bg:#f7f5ef;--card:#fff;--ink:#16211b;--mute:#5d6b63;--g:#0f5132;--g2:#14703f;--gold:#d4a017;--line:#e3e0d5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1511;--card:#17201a;--ink:#eef2ee;--mute:#9db0a3;--g:#2fa066;--g2:#3cb87a;--line:#26332b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1511;--card:#17201a;--ink:#eef2ee;--mute:#9db0a3;--g:#2fa066;--g2:#3cb87a;--line:#26332b;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:10px 5%;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font:700 20px/1 Georgia,serif;letter-spacing:.5px}.brand small{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700}
+nav{margin-left:auto;display:flex;gap:6px}
+nav button,.btn{border:0;border-radius:10px;padding:9px 16px;font:600 14px inherit;cursor:pointer;background:transparent;color:var(--ink)}
+nav button.on{background:var(--g);color:#fff}.btn{background:var(--g);color:#fff}.btn:hover{background:var(--g2)}.btn.gold{background:var(--gold);color:#201800}
+.hero{background:linear-gradient(135deg,#0b3d26,#14703f 70%,#1c8a50);color:#fff;padding:56px 5% 72px}
+.hero h1{font:700 clamp(28px,5vw,48px)/1.1 Georgia,serif;margin:0 0 8px;max-width:700px}.hero p{margin:0 0 24px;opacity:.9;max-width:560px}
+.search{background:var(--card);color:var(--ink);border-radius:16px;padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;box-shadow:0 10px 30px #0004;margin-bottom:-110px}
+label{font-size:12px;color:var(--mute);font-weight:600;display:block;margin-bottom:3px}
+select,input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+main{padding:130px 5% 40px;max-width:1280px;margin:auto}
+.bar{display:flex;justify-content:space-between;align-items:center;margin:0 0 16px;flex-wrap:wrap;gap:8px}.bar h2{margin:0;font:700 24px Georgia,serif}.bar span{color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #0002}
+.pic{height:160px;position:relative;display:grid;place-items:center;font-size:54px}
+.tag{position:absolute;top:10px;left:10px;background:var(--gold);color:#201800;font:700 11px/1 system-ui;padding:6px 9px;border-radius:20px;letter-spacing:.5px}
+.fav{position:absolute;top:8px;right:8px;background:#fffd;border:0;border-radius:50%;width:34px;height:34px;font-size:17px;cursor:pointer;color:#c0392b}
+.cb{padding:14px}.price{font:700 20px Georgia,serif;color:var(--g)}.cb h3{margin:2px 0;font-size:16px}.cb p{margin:0;color:var(--mute);font-size:14px}
+.sp{display:flex;gap:12px;margin-top:8px;font-size:13px;color:var(--mute)}
+.modal{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.show{display:flex}
+.box{background:var(--card);border-radius:18px;max-width:560px;width:100%;max-height:92vh;overflow:auto}.box .pic{height:200px}.box .in{padding:20px}
+.x{position:absolute;right:12px;top:12px;background:#000a;color:#fff;border:0;border-radius:50%;width:34px;height:34px;cursor:pointer;z-index:2}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.in form>*{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:20px;overflow-x:auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}.stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.stats b{font:700 26px Georgia,serif;color:var(--g);display:block}
+.mp{position:absolute;top:100%;left:5%;width:min(400px,90vw);background:var(--card);border:1px solid var(--line);border-radius:0 0 14px 14px;box-shadow:0 14px 30px #0003}.mp details{border-bottom:1px solid var(--line)}.mp summary{padding:14px 16px;font-weight:700;letter-spacing:1px;cursor:pointer;color:var(--g);list-style:none;display:flex;justify-content:space-between}.mp summary::after{content:'▾'}.mp details[open] summary::after{content:'▴'}.mp a,.ra a{display:block;padding:11px 22px;cursor:pointer;color:var(--ink);border-top:1px solid var(--line)}.mp a:hover,.ra a:hover{background:var(--bg)}.ra{margin-top:10px}.ra a{font-weight:600}.lg{width:auto;padding:8px}.bn{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:34px}.bc{border-radius:16px;padding:22px;background:var(--card);border:1px solid var(--line)}.bc.g{background:linear-gradient(135deg,#0b3d26,#14703f);color:#fff;border:0}.bc h3{margin:0 0 6px;font:700 22px Georgia,serif;letter-spacing:1px}.bc p{margin:0 0 14px;color:var(--mute)}.bc.g p{color:#fff;opacity:.9}
+footer{background:#0b3d26;color:#cfe3d6;padding:28px 5%;font-size:14px;text-align:center}
+.empty{text-align:center;color:var(--mute);padding:50px 0}.hide{display:none}
+</style></head><body>
+<header>
+<a class="brand" href="#home"><svg width="44" height="44" viewBox="0 0 64 64" aria-label="Kendeal Agencies logo"><rect width="64" height="64" rx="14" fill="#0f5132"/><path d="M10 31 32 12l22 19" fill="none" stroke="#d4a017" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 28v26M22 42l17-14M27 38l14 16" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="46" cy="22" r="3" fill="#d4a017"/></svg><span><b>KENDEAL</b><small>AGENCIES</small></span></a>
+<nav><button class="btn" onclick="tm()">☰ <span data-i="menu">Menu</span></button><button id="n-home" class="on" data-i="props" onclick="go('home')">Properties</button><button id="n-fav" onclick="go('fav')"><span data-i="saved">Saved</span> <span id="fc"></span></button><button id="n-agent" class="hide" data-i="portal" onclick="go('agent')">Agent Portal</button><select id="lg" class="lg" aria-label="Language" onchange="setLang(this.value)"><option value="en">EN</option><option value="sw">SW</option></select><button id="ub" class="btn gold" onclick="acct()">Sign in</button></nav>
+<div id="mp" class="mp hide">
+<details><summary data-i="fa">FIND AN AGENT</summary><a data-i="fka" onclick="go('agents')">Find a Kendeal agent</a><a data-i="fko" onclick="go('offices')">Find a Kendeal office</a></details>
+<details><summary data-i="mu">MARKET UPDATES</summary><a data-i="mun" onclick="go('news')">Latest real estate news</a></details>
+<details><summary data-i="ab">ALL ABOUT BUYING</summary><a data-i="pfs" onclick="go('home','For Sale')">Properties for sale</a><a data-i="pfl" onclick="go('home','For Lease')">Properties for lease</a></details>
+<details><summary data-i="as">ALL ABOUT SELLING</summary><a data-i="tta" onclick="go('sell')">Talk to an agent</a></details>
+</div>
+</header>
+
+<section id="v-home">
+<div class="hero"><h1 data-i="h1">Find your place anywhere in Kenya</h1><p data-i="hp">Houses, apartments and land for sale or lease, from Mombasa to Kisumu, Nairobi to Eldoret.</p>
+<div class="search">
+<div><label>Looking to</label><select id="fMode"><option value="">Buy or Lease</option><option>For Sale</option><option>For Lease</option></select></div>
+<div><label>Property type</label><select id="fType"><option value="">All types</option><option>House</option><option>Apartment</option><option>Land</option></select></div>
+<div><label>County</label><select id="fCounty"><option value="">All counties</option></select></div>
+<div><label>Max price (KES)</label><select id="fMax"><option value="0">Any</option><option>100000</option><option>1000000</option><option>5000000</option><option>15000000</option><option>50000000</option></select></div>
+<div><label>Keyword</label><input id="fQ" placeholder="e.g. Westlands"></div>
+</div></div>
+<main><div class="bn"><div class="bc g"><h3 data-i="fa">FIND AN AGENT</h3><p data-i="fap">Speak to a local expert who knows your area and budget.</p><button class="btn gold" data-i="fka" onclick="go('agents')">Find a Kendeal agent</button></div><div class="bc"><h3 data-i="adv">ADVICE</h3><p data-i="advp">Practical guidance for buyers, sellers and tenants.</p><div class="ra"><a data-i="a1" onclick="adv(0)">Choosing an agent</a><a data-i="a2" onclick="adv(1)">Finding a home</a><a data-i="a3" onclick="adv(2)">Due diligence</a></div></div></div><div class="bar"><h2>Available properties</h2><span id="cnt"></span></div><div class="grid" id="grid"></div></main>
+</section>
+
+<section id="v-fav" class="hide"><main style="padding-top:30px"><div class="bar"><h2>Saved properties</h2></div><div class="grid" id="gridFav"></div></main></section>
+
+<section id="v-agent" class="hide"><main style="padding-top:30px">
+<div class="bar"><h2>Agent portal</h2><span>Client &amp; listing management</span></div>
+<div class="stats"><div><b id="s1">0</b>Active listings</div><div><b id="s2">0</b>Client inquiries</div><div><b id="s3">0</b>New leads</div><div><b id="s4">0</b>Closed</div></div>
+<div class="panel"><h3 style="margin-top:0">Client inquiries</h3><table><thead><tr><th>Client</th><th>Contact</th><th>Property</th><th>Status</th></tr></thead><tbody id="inq"></tbody></table><div class="empty" id="noinq">No inquiries yet. They appear here when clients contact you from a listing.</div></div>
+<div class="panel"><h3 style="margin-top:0">Post market news</h3><form onsubmit="addNews(event)"><label>Headline</label><input name="nt" required><div style="margin:10px 0"><label>Story</label><textarea name="nb" rows="3" required></textarea></div><button class="btn">Publish news</button></form></div>
+<div class="panel"><h3 style="margin-top:0">Add a listing</h3>
+<form id="addF"><div class="two"><div><label>Title</label><input name="title" required></div><div><label>Town / Area</label><input name="area" required></div></div>
+<div class="two"><div><label>County</label><select name="county" id="aCounty"></select></div><div><label>Type</label><select name="type"><option>House</option><option>Apartment</option><option>Land</option></select></div></div>
+<div class="two"><div><label>Status</label><select name="mode"><option>For Sale</option><option>For Lease</option></select></div><div><label>Price (KES)</label><input name="price" type="number" min="0" required></div></div>
+<div class="two"><div><label>Bedrooms (0 for land)</label><input name="beds" type="number" min="0" value="0"></div><div><label>Size (sqm or acres)</label><input name="size" placeholder="e.g. 1/4 acre"></div></div>
+<div style="margin:10px 0"><label>Description</label><textarea name="desc" rows="3"></textarea></div><button class="btn">Publish listing</button></form></div>
+</main></section>
+
+<section id='v-agents' class='hide'><main style='padding-top:30px'><div class='bar'><h2 data-i='fka'>Find a Kendeal agent</h2><select id='agC' style='width:auto' onchange='ag()'></select></div><div class='grid' id='agL'></div></main></section>
+<section id='v-offices' class='hide'><main style='padding-top:30px'><div class='bar'><h2 data-i='fko'>Find a Kendeal office</h2><span>Sample addresses – replace with your real offices</span></div><div class='grid' id='ofL'></div></main></section>
+<section id='v-news' class='hide'><main style='padding-top:30px;max-width:800px'><div class='bar'><h2 data-i='mu'>MARKET UPDATES</h2></div><div id='nl'></div></main></section>
+<section id='v-sell' class='hide'><main style='padding-top:30px;max-width:640px'><div class='bar'><h2 data-i='as'>ALL ABOUT SELLING</h2></div><div class='panel'><form onsubmit='sell(event)'><p style='margin-top:0'>Tell us about your property and a Kendeal agent will contact you for a free valuation.</p><div class='two'><input name='nm' placeholder='Your name' required><input name='ph' placeholder='Phone (+254…)' required></div><input name='em' type='email' placeholder='Email' style='margin:10px 0'><div class='two'><select name='ty'><option>House</option><option>Apartment</option><option>Land</option></select><select name='co' id='sCo'></select></div><textarea name='dt' rows='3' placeholder='Location, size, asking price…' style='margin:10px 0'></textarea><button class='btn gold' style='width:100%' data-i='tta'>Talk to an agent</button></form></div></main></section>
+<section id='v-advice' class='hide'><main style='padding-top:30px;max-width:760px'><div id='av'></div></main></section>
+<div class='modal' id='lm' onclick="if(event.target.id=='lm')this.classList.remove('show')"><div class='box'><div class='in'><h3 data-i='si'>Sign in</h3><form onsubmit='login(event)'><input name='name' placeholder='Full name / Jina kamili' required><input name='email' type='email' placeholder='Email / Barua pepe' required><div class='two'><div><label>Language / Lugha</label><select name='lang' id='ll' onchange='setLang(this.value)'><option value='en'>English</option><option value='sw'>Kiswahili</option></select></div><div><label>Account</label><select name='role'><option value='client'>Client / Mteja</option><option value='admin'>Agent admin / Msimamizi</option></select></div></div><button class='btn' style='width:100%'>Continue</button></form><small>Demo sign-in: details stay in this browser only and there is no password check yet.</small></div></div></div>
+<footer>© Kendeal Agencies · Nairobi, Kenya · Tel +254 700 000 000 · info@kendealagencies.co.ke</footer>
+
+<div class="modal" id="modal"><div class="box" id="box" style="position:relative"></div></div>
+
+<script>
+const KES=n=>"KES "+Number(n).toLocaleString("en-KE");
+const COUNTIES=["Nairobi","Mombasa","Kisumu","Nakuru","Kiambu","Kajiado","Machakos","Uasin Gishu","Kilifi","Nyeri","Kisii","Meru"];
+const ICON={House:"🏡",Apartment:"🏢",Land:"🌿"};
+const BG={House:"linear-gradient(135deg,#cfe8d5,#8fc7a1)",Apartment:"linear-gradient(135deg,#d6e4f0,#9bb9d6)",Land:"linear-gradient(135deg,#efe3c0,#cdb36e)"};
+let L=[
+{id:1,title:"4-Bedroom Maisonette",area:"Karen",county:"Nairobi",type:"House",mode:"For Sale",price:42000000,beds:4,size:"0.5 acre",desc:"Gated maisonette with servant quarters, garden and borehole."},
+{id:2,title:"Modern 2-Bedroom Apartment",area:"Westlands",county:"Nairobi",type:"Apartment",mode:"For Lease",price:85000,beds:2,size:"110 sqm",desc:"Gym, backup generator, secure parking and fibre internet."},
+{id:3,title:"Beachfront Apartment",area:"Nyali",county:"Mombasa",type:"Apartment",mode:"For Sale",price:14500000,beds:3,size:"140 sqm",desc:"Ocean views, swimming pool and 24-hour security."},
+{id:4,title:"Prime Plot, Ready Title",area:"Kitengela",county:"Kajiado",type:"Land",mode:"For Sale",price:1800000,beds:0,size:"1/8 acre",desc:"Near tarmac and water, ready title deed available."},
+{id:5,title:"3-Bedroom Bungalow",area:"Milimani",county:"Kisumu",type:"House",mode:"For Sale",price:18500000,beds:3,size:"0.25 acre",desc:"Quiet neighbourhood close to the lake and CBD."},
+{id:6,title:"Farm Land, 5 Acres",area:"Molo",county:"Nakuru",type:"Land",mode:"For Sale",price:6500000,beds:0,size:"5 acres",desc:"Fertile loam soil, river frontage, suitable for farming."},
+{id:7,title:"Bedsitter / Studio",area:"Ruaka",county:"Kiambu",type:"Apartment",mode:"For Lease",price:18000,beds:1,size:"35 sqm",desc:"Affordable studio with water and parking, near Two Rivers."},
+{id:8,title:"5-Bedroom Villa",area:"Runda",county:"Nairobi",type:"House",mode:"For Lease",price:350000,beds:5,size:"0.75 acre",desc:"Furnished villa with pool, DSQ and manicured garden."},
+{id:9,title:"Commercial Plot",area:"Eldoret CBD",county:"Uasin Gishu",type:"Land",mode:"For Lease",price:120000,beds:0,size:"0.2 acre",desc:"Corner plot on a busy road, ideal for retail or offices."},
+{id:10,title:"Diani Holiday Cottage",area:"Diani",county:"Kilifi",type:"House",mode:"For Sale",price:9800000,beds:2,size:"0.3 acre",desc:"Walk to the beach, tropical garden, rental income potential."}];
+let inq=[],fav=[];
+try{inq=JSON.parse(localStorage.getItem("kd_inq")||"[]");fav=JSON.parse(localStorage.getItem("kd_fav")||"[]");const ex=JSON.parse(localStorage.getItem("kd_L")||"[]");L=L.concat(ex)}catch(e){}
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem("kd_inq",JSON.stringify(inq));localStorage.setItem("kd_fav",JSON.stringify(fav));localStorage.setItem("kd_L",JSON.stringify(L.filter(x=>x.id>100)))}catch(e){}}
+COUNTIES.forEach(c=>{$("fCounty").add(new Option(c));$("aCounty").add(new Option(c))});
+function card(p){return `<div class="card" onclick="openP(${p.id})"><div class="pic" style="background:${BG[p.type]}"><span class="tag">${p.mode.toUpperCase()}</span><button class="fav" aria-label="Save" onclick="event.stopPropagation();tf(${p.id})">${fav.includes(p.id)?"♥":"♡"}</button>${ICON[p.type]}</div><div class="cb"><div class="price">${KES(p.price)}${p.mode=="For Lease"?" /mo":""}</div><h3>${esc(p.title)}</h3><p>${esc(p.area)}, ${p.county}</p><div class="sp"><span>${p.type}</span>${p.beds?`<span>🛏 ${p.beds} bd</span>`:""}<span>${esc(p.size||"")}</span></div></div></div>`}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(){const q=$("fQ").value.toLowerCase(),m=$("fMode").value,t=$("fType").value,c=$("fCounty").value,mx=+$("fMax").value;
+const r=L.filter(p=>(!m||p.mode==m)&&(!t||p.type==t)&&(!c||p.county==c)&&(!mx||p.price<=mx)&&(!q||(p.title+p.area+p.county+p.desc).toLowerCase().includes(q)));
+$("cnt").textContent=r.length+" properties";$("grid").innerHTML=r.length?r.map(card).join(""):'<div class="empty" style="grid-column:1/-1">No properties match. Try widening your search.</div>';
+const f=L.filter(p=>fav.includes(p.id));$("gridFav").innerHTML=f.length?f.map(card).join(""):'<div class="empty" style="grid-column:1/-1">Tap ♡ on any property to save it here.</div>';
+$("fc").textContent=fav.length?"("+fav.length+")":"";
+$("s1").textContent=L.length;$("s2").textContent=inq.length;$("s3").textContent=inq.filter(i=>i.st=="New").length;$("s4").textContent=inq.filter(i=>i.st=="Closed").length;
+$("noinq").style.display=inq.length?"none":"block";
+$("inq").innerHTML=inq.map((i,k)=>`<tr><td>${esc(i.name)}</td><td>${esc(i.phone)}<br><small>${esc(i.email||"")}</small></td><td>${esc(i.prop)}</td><td><select onchange="inq[${k}].st=this.value;save();render()">${["New","Contacted","Viewing","Closed"].map(s=>`<option ${s==i.st?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")}
+function tf(id){fav=fav.includes(id)?fav.filter(x=>x!=id):[...fav,id];save();render()}
+function openP(id){const p=L.find(x=>x.id==id);$("box").innerHTML=`<button class="x" onclick="closeM()" aria-label="Close">✕</button><div class="pic" style="background:${BG[p.type]}"><span class="tag">${p.mode.toUpperCase()}</span>${ICON[p.type]}</div><div class="in"><div class="price">${KES(p.price)}${p.mode=="For Lease"?" /mo":""}</div><h3 style="margin:4px 0">${esc(p.title)}</h3><p style="color:var(--mute);margin:0 0 8px">${esc(p.area)}, ${p.county} · ${p.type}${p.beds?" · "+p.beds+" bedrooms":""} · ${esc(p.size||"")}</p><p>${esc(p.desc||"")}</p><hr style="border:0;border-top:1px solid var(--line)"><h4>Enquire about this property</h4><form onsubmit="send(event,${p.id})"><input name="name" placeholder="Your name" required><div class="two"><input name="phone" placeholder="Phone (+254…)" required><input name="email" type="email" placeholder="Email"></div><textarea name="msg" rows="2" placeholder="I’d like to arrange a viewing…"></textarea><button class="btn gold" style="width:100%">Send enquiry</button></form></div>`;$("modal").classList.add("show")}
+function send(e,id){e.preventDefault();const f=e.target,p=L.find(x=>x.id==id);inq.unshift({name:f.name.value,phone:f.phone.value,email:f.email.value,prop:p.title+" – "+p.area,st:"New"});save();render();$("box").querySelector(".in").innerHTML='<h3>Thank you!</h3><p>Your enquiry was received. A Kendeal agent will contact you shortly.</p><button class="btn" onclick="closeM()">Close</button>'}
+function closeM(){$("modal").classList.remove("show")}
+$("modal").onclick=e=>{if(e.target.id=="modal")closeM()};
+$("addF").onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));f.id=100+Date.now()%1e9;f.price=+f.price;f.beds=+f.beds;L.push(f);save();e.target.reset();render();alert("Listing published.")};
+["fMode","fType","fCounty","fMax"].forEach(i=>$(i).onchange=render);$("fQ").oninput=render;
+const VW=['home','fav','agent','agents','offices','news','sell','advice'];
+function go(v,m){VW.forEach(x=>{$('v-'+x).classList.toggle('hide',x!=v);const n=$('n-'+x);if(n)n.classList.toggle('on',x==v)});if(m!==undefined){$('fMode').value=m;render()}$('mp').classList.add('hide');window.scrollTo(0,0)}
+function tm(){$('mp').classList.toggle('hide')}
+const I={en:{menu:'Menu',props:'Properties',saved:'Saved',portal:'Agent Portal',si:'Sign in',so:'Sign out',fa:'FIND AN AGENT',fka:'Find a Kendeal agent',fko:'Find a Kendeal office',mu:'MARKET UPDATES',mun:'Latest real estate news',ab:'ALL ABOUT BUYING',pfs:'Properties for sale',pfl:'Properties for lease',as:'ALL ABOUT SELLING',tta:'Talk to an agent',adv:'ADVICE',a1:'Choosing an agent',a2:'Finding a home',a3:'Due diligence',h1:'Find your place anywhere in Kenya',hp:'Houses, apartments and land for sale or lease, from Mombasa to Kisumu, Nairobi to Eldoret.',fap:'Speak to a local expert who knows your area and budget.',advp:'Practical guidance for buyers, sellers and tenants.'},sw:{menu:'Menyu',props:'Mali',saved:'Zilizohifadhiwa',portal:'Lango la Wakala',si:'Ingia',so:'Toka',fa:'PATA WAKALA',fka:'Tafuta wakala wa Kendeal',fko:'Tafuta ofisi ya Kendeal',mu:'HABARI ZA SOKO',mun:'Habari mpya za mali isiyohamishika',ab:'YOTE KUHUSU KUNUNUA',pfs:'Mali za kuuzwa',pfl:'Mali za kukodisha',as:'YOTE KUHUSU KUUZA',tta:'Zungumza na wakala',adv:'USHAURI',a1:'Kuchagua wakala',a2:'Kutafuta nyumba',a3:'Uchunguzi wa kina',h1:'Pata makazi yako popote nchini Kenya',hp:'Nyumba, apartment na ardhi za kuuzwa au kukodisha, kutoka Mombasa hadi Kisumu, Nairobi hadi Eldoret.',fap:'Zungumza na mtaalamu wa eneo lako anayejua bajeti yako.',advp:'Mwongozo wa vitendo kwa wanunuzi, wauzaji na wapangaji.'}};
+const ADV=[{en:['Confirm the agent is registered with the Estate Agents Registration Board (EARB).','Ask about recent sales or leases in the exact area.','Get the commission rate and agreement in writing.','Choose someone who listens and responds promptly.'],sw:['Hakikisha wakala amesajiliwa na Bodi ya Usajili wa Mawakala wa Mali (EARB).','Uliza kuhusu mauzo au ukodishaji wa hivi karibuni katika eneo husika.','Pata kiwango cha kamisheni na mkataba kwa maandishi.','Chagua mtu anayekusikiliza na kujibu haraka.']},{en:['Set a realistic budget that includes legal fees, stamp duty and agent costs.','List must-haves versus nice-to-haves: location, commute, water, security.','Visit at different times of day and talk to the neighbours.','Check access roads, drainage and nearby services.'],sw:['Weka bajeti halisi ikijumuisha ada za kisheria, ushuru wa stempu na gharama za wakala.','Orodhesha mahitaji muhimu na ya ziada: eneo, usafiri, maji, usalama.','Tembelea nyakati tofauti za siku na zungumza na majirani.','Angalia barabara, mifereji ya maji na huduma za karibu.']},{en:['Do an official search at the Lands registry to confirm ownership and any encumbrances.','Verify the seller’s ID and that the title or lease matches their name.','Confirm rates, rent and service charges are paid and that buildings have approvals.','Have an advocate review the sale agreement before you pay any deposit.'],sw:['Fanya utafutaji rasmi katika masjala ya ardhi kuthibitisha umiliki na vikwazo vyovyote.','Thibitisha kitambulisho cha muuzaji na kwamba hati inalingana na jina lake.','Hakikisha ada na kodi zimelipwa na majengo yana idhini.','Mwambie wakili apitie mkataba wa mauzo kabla ya kulipa amana.']}];
+const AG=[['Wanjiru Kamau','Nairobi','Residential sales','254700000001'],['Otieno Odhiambo','Kisumu','Land & plots','254700000002'],['Amina Hassan','Mombasa','Beach & holiday homes','254700000003'],['Kiprop Rotich','Uasin Gishu','Farms & commercial','254700000004'],['Mary Njeri','Kiambu','Rentals & apartments','254700000005'],['Peter Mutua','Machakos','Land & plots','254700000006']].map(a=>({n:a[0],c:a[1],s:a[2],p:a[3]}));
+const OF=[['Nairobi (HQ)','Westlands, Nairobi','254700000010'],['Mombasa','Nyali, Mombasa','254700000011'],['Kisumu','Milimani, Kisumu','254700000012'],['Nakuru','Nakuru Town','254700000013'],['Eldoret','Eldoret CBD','254700000014']];
+let lang='en',user=null,NW=[{d:'Sample',t:'Market update headline – replace with current news',b:'Admins can post fresh real estate news from the Agent Portal. This is placeholder text.'},{d:'Sample',t:'Buyer tips for the season',b:'Placeholder story. Publish real market commentary here.'}];
+try{lang=localStorage.getItem('kd_lang')||'en';user=JSON.parse(localStorage.getItem('kd_user')||'null');const s=JSON.parse(localStorage.getItem('kd_news')||'null');if(s)NW=s}catch(e){}
+const T=k=>(I[lang]&&I[lang][k])||I.en[k]||k;
+function save2(){try{localStorage.setItem('kd_lang',lang);localStorage.setItem('kd_user',JSON.stringify(user))}catch(e){}}
+function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-i]').forEach(e=>e.textContent=T(e.dataset.i));$('lg').value=lang;$('ll').value=lang;$('ub').textContent=user?'👤 '+user.name.split(' ')[0]+' · '+T('so'):T('si');const adm=user&&user.role=='admin';$('n-agent').classList.toggle('hide',!adm);if(!adm&&!$('v-agent').classList.contains('hide'))go('home');render()}
+function setLang(v){lang=v;save2();applyLang()}
+function acct(){if(user){user=null;save2();applyLang()}else $('lm').classList.add('show')}
+function login(e){e.preventDefault();const f=e.target;user={name:f.name.value,email:f.email.value,role:f.role.value};lang=f.lang.value;save2();$('lm').classList.remove('show');applyLang()}
+function ag(){const c=$('agC').value;$('agL').innerHTML=AG.filter(a=>!c||a.c==c).map(a=>`<div class='card' style='cursor:default'><div class='cb'><h3>${a.n}</h3><p>${a.s} · ${a.c}</p><div class='sp'><a href='tel:+${a.p}'>📞 +${a.p}</a></div><a class='btn gold' style='display:inline-block;margin-top:10px;text-decoration:none' href='https://wa.me/${a.p}' target='_blank' rel='noopener'>WhatsApp</a></div></div>`).join('')||'<div class="empty" style="grid-column:1/-1">No agents in this county yet.</div>'}
+function nr(){$('nl').innerHTML=NW.map(n=>`<div class='panel'><small>${esc(n.d)}</small><h3 style='margin:4px 0'>${esc(n.t)}</h3><p style='margin:0'>${esc(n.b)}</p></div>`).join('')}
+function addNews(e){e.preventDefault();const f=e.target;NW.unshift({d:new Date().toLocaleDateString('en-KE'),t:f.nt.value,b:f.nb.value});try{localStorage.setItem('kd_news',JSON.stringify(NW))}catch(x){}f.reset();nr();alert('News published.')}
+function adv(i){$('av').innerHTML=`<h2 style='font-family:Georgia,serif'>${T('a'+(i+1))}</h2><div class='panel'><ul>${ADV[i][lang].map(x=>`<li style='margin:8px 0'>${x}</li>`).join('')}</ul><small>General guidance only, not legal advice.</small></div><button class='btn' onclick="go('agents')">${T('fka')}</button>`;go('advice')}
+function sell(e){e.preventDefault();const f=e.target;inq.unshift({name:f.nm.value,phone:f.ph.value,email:f.em.value,prop:'SELLER – '+f.ty.value+', '+f.co.value+': '+f.dt.value,st:'New'});save();render();f.parentNode.innerHTML='<h3>Thank you!</h3><p>A Kendeal agent will contact you shortly.</p>'}
+['agC'].forEach(i=>$(i).add(new Option('All counties','')));COUNTIES.forEach(c=>{$('agC').add(new Option(c));$('sCo').add(new Option(c))});
+$('ofL').innerHTML=OF.map(o=>`<div class='card' style='cursor:default'><div class='cb'><h3>🏢 ${o[0]}</h3><p>${o[1]}</p><div class='sp'><a href='tel:+${o[2]}'>📞 +${o[2]}</a><span>Mon–Sat 8am–5pm</span></div></div></div>`).join('');
+ag();nr();applyLang();
+render();
+</script></body></html>
